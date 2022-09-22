@@ -28,7 +28,8 @@ def output_page(request: Request, text : str):
 
 	data  = '{"text":"' + clean_text + '"}'
 
-	result = requests.post(url   = "http://0.0.0.0:8000/predict",
+	# result = requests.post(url   = "http://0.0.0.0:8000/predict",
+	result = requests.post(url   = "https://modelapi-zofvpzzumq-uw.a.run.app/predict",
                          data  = data,
                          headers = {'Content-Type':'application/json'})
 
