@@ -29,6 +29,7 @@ def output_page(request: Request, text : str):
 	data  = '{"text":"' + clean_text + '"}'
 
 	# result = requests.post(url   = "http://0.0.0.0:8000/predict",
+	# # THIS FOLLOWING API IS NOT WORKING 
 	result = requests.post(url   = "https://modelapi-zofvpzzumq-uw.a.run.app/predict",
                          data  = data,
                          headers = {'Content-Type':'application/json'})
@@ -46,4 +47,4 @@ def about_page(request: Request):
 
 
 if __name__ == "__main__":
-	uvicorn.run(app, host="0.0.0.0", port=8080)
+	uvicorn.run(app, host="127.0.0.1", port=8080)

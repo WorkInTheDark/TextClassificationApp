@@ -21,4 +21,4 @@ RUN pip install -r requirements.txt
 RUN python setup.py install
 RUN python modelapi/install_nltk.py
 
-CMD ["uvicorn", "--workers","2", "--host","0.0.0.0", "--port", "8080","main:app"]
+CMD ["uvicorn", "--workers","2", "--host","127.0.0.1", "--port", "8080","main:app"]
